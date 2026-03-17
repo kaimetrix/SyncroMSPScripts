@@ -20,7 +20,9 @@ if ($AssetFieldName -match '^\s*$') {
     $AssetFieldName = 'Windows 11 Compatible'
 }
 
-[int]$MinOSDiskFreeGB = 40
+# Win 11 upgrades require minimum 40GB free on OS disk to be reliable.
+## I'm setting free space to 4 GB so it is not a factor in our reporting.
+[int]$MinOSDiskFreeGB = 4
 [int]$MinMemoryGB = 4
 [Uint32]$MinClockSpeedMHz = 1000
 [Uint32]$MinLogicalCores = 2
